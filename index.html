@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10110f">
+  <meta name="description" content="FlowZenix builds responsive business websites, practical web applications, and useful workflow automations.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="FlowZenix">
+  <meta property="og:title" content="FlowZenix — Better websites. Smarter workflows.">
+  <meta property="og:description" content="Responsive business websites, practical web applications, and useful workflow automations.">
+  <meta property="og:url" content="https://flowzenix9.netlify.app/">
+  <meta property="og:image" content="https://flowzenix9.netlify.app/social-preview.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="FlowZenix — Better websites. Smarter workflows.">
+  <meta name="twitter:description" content="Responsive business websites, practical web applications, and useful workflow automations.">
+  <meta name="twitter:image" content="https://flowzenix9.netlify.app/social-preview.png">
+  <link rel="canonical" href="https://flowzenix9.netlify.app/">
+  <link rel="icon" href="/logo-mark.png" type="image/png" sizes="256x256">
+  <title>FlowZenix — Better websites. Smarter workflows.</title>
+  <style>
+    :root { color-scheme:dark; --bg:#10110f; --surface:#171916; --surface2:#1c1f1b; --text:#f3f4ef; --muted:#b1b6aa; --line:#343830; --accent:#9cf03b; --accent-ink:#11150a; --max:1120px; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; scroll-padding-top:90px; }
+    body { margin:0; background:var(--bg); color:var(--text); font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; line-height:1.65; -webkit-font-smoothing:antialiased; }
+    a { color:inherit; text-decoration:none; }
+    a:focus-visible,button:focus-visible,summary:focus-visible { outline:3px solid var(--accent); outline-offset:4px; }
+    .wrap { width:min(var(--max),calc(100% - 48px)); margin-inline:auto; }
+    .site-header { border-bottom:1px solid var(--line); }
+    .nav { min-height:76px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .brand { display:inline-flex; align-items:center; gap:10px; font-size:1.13rem; font-weight:800; letter-spacing:-.04em; }
+    .brand-logo { display:block; width:40px; height:40px; flex:none; border-radius:8px; background:#030503; object-fit:cover; }
+    .navlinks { display:flex; align-items:center; gap:28px; color:var(--muted); font-size:.91rem; }
+    .navlinks a:hover,.textlink:hover { color:var(--accent); }
+    .navcta,.btn { display:inline-flex; justify-content:center; align-items:center; gap:9px; border:1px solid var(--line); border-radius:7px; padding:10px 15px; font-weight:700; color:var(--text); }
+    .navcta { color:var(--text); }
+    .menu-toggle { display:none; border:1px solid var(--line); border-radius:7px; padding:9px 12px; color:var(--text); background:transparent; font:inherit; }
+    .hero { display:grid; grid-template-columns:1.2fr .8fr; align-items:center; gap:64px; padding-block:92px 100px; }
+    .eyebrow,.kicker { color:var(--accent); text-transform:uppercase; letter-spacing:.13em; font-size:.76rem; font-weight:800; }
+    h1 { max-width:760px; margin:16px 0 22px; font-size:clamp(3rem,7vw,5.5rem); line-height:1.02; letter-spacing:-.065em; }
+    h1 span { color:var(--accent); }
+    .lead { max-width:650px; margin:0 0 28px; color:var(--muted); font-size:1.08rem; }
+    .actions { display:flex; flex-wrap:wrap; gap:11px; }
+    .btn { padding:12px 17px; transition:background .16s ease,border-color .16s ease; }
+    .btn:hover { border-color:var(--accent); }
+    .primary { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+    .primary:hover { background:#d6f59b; }
+    .hero-note { margin-top:26px; color:var(--muted); font-size:.82rem; }
+    .hero-panel { border:1px solid var(--line); border-radius:12px; background:var(--surface); padding:26px; }
+    .panel-top { display:flex; align-items:center; gap:9px; color:var(--muted); font-size:.78rem; border-bottom:1px solid var(--line); padding-bottom:17px; }
+    .panel-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); }
+    .panel-title { font-size:1.7rem; line-height:1.2; letter-spacing:-.04em; margin:25px 0 8px; }
+    .panel-copy { margin:0; color:var(--muted); font-size:.93rem; }
+    .panel-list { margin:22px 0 0; padding:0; list-style:none; display:grid; gap:12px; }
+    .panel-list li { display:flex; align-items:center; gap:10px; font-size:.89rem; }
+    .check { color:var(--accent); font-weight:900; }
+    section { padding-block:76px; }
+    .sectionhead { display:flex; justify-content:space-between; align-items:end; gap:28px; margin-bottom:30px; }
+    h2.sectiontitle { margin:8px 0 0; font-size:clamp(2rem,4vw,3rem); line-height:1.12; letter-spacing:-.055em; }
+    .sectiondesc { max-width:460px; margin:0; color:var(--muted); font-size:.94rem; }
+    .projects { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .project { display:flex; flex-direction:column; overflow:hidden; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .project-art { min-height:204px; padding:18px; background:var(--surface2); display:flex; flex-direction:column; justify-content:space-between; border-bottom:1px solid var(--line); }
+    .art-cafe { background:linear-gradient(135deg,#30261b,#191613 75%); }
+    .art-crm { background:linear-gradient(135deg,#1b2a31,#171a1d 75%); }
+    .art-flow { background:linear-gradient(135deg,#29253a,#19191c 75%); }
+    .art-meta { color:#d3d6ce; text-transform:uppercase; letter-spacing:.1em; font-size:.67rem; }
+    .art-title { max-width:250px; font-size:1.65rem; line-height:1.05; letter-spacing:-.045em; font-weight:750; }
+    .preview-label { color:#d3d6ce; font-size:.68rem; }
+    .projectbody { display:flex; flex-direction:column; height:100%; padding:19px; }
+    .projectbody h3 { margin:0 0 7px; font-size:1.1rem; letter-spacing:-.02em; }
+    .projectbody p { margin:0; color:var(--muted); font-size:.87rem; }
+    .projectfoot { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:auto; padding-top:19px; }
+    .demotag { color:var(--accent); font-size:.72rem; }
+    .textlink { color:var(--text); font-size:.85rem; font-weight:750; text-decoration:underline; text-decoration-color:#59604f; text-underline-offset:4px; }
+    .services { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; }
+    .service { padding:22px; border:1px solid var(--line); border-radius:10px; background:var(--surface); }
+    .service-num { color:var(--accent); font-size:.75rem; font-weight:800; letter-spacing:.1em; }
+    .service h3 { margin:13px 0 8px; font-size:1.14rem; letter-spacing:-.025em; }
+    .service p { margin:0; color:var(--muted); font-size:.9rem; }
+    .about-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:46px; align-items:center; }
+    .about-logo-frame { width:min(100%,340px); overflow:hidden; border:1px solid var(--line); border-radius:10px; background:#030503; }
+    .about-logo { display:block; width:100%; height:auto; }
+    .about-copy h2 { margin:7px 0 14px; font-size:2.25rem; line-height:1.1; letter-spacing:-.05em; }
+    .about-copy p { color:var(--muted); margin:0 0 12px; }
+    .steps { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:15px; }
+    .step { padding:18px 0 0; border-top:1px solid var(--line); }
+    .stepnum { color:var(--accent); font-size:.73rem; letter-spacing:.1em; font-weight:800; }
+    .step h3 { margin:8px 0 5px; font-size:1rem; }
+    .step p { margin:0; color:var(--muted); font-size:.84rem; }
+    .faq { display:grid; gap:9px; max-width:820px; }
+    details { border:1px solid var(--line); border-radius:8px; background:var(--surface); padding:15px 17px; }
+    summary { cursor:pointer; font-weight:700; }
+    details p { margin:10px 0 0; color:var(--muted); font-size:.9rem; }
+    .cta { display:flex; justify-content:space-between; align-items:center; gap:28px; border:1px solid var(--line); border-radius:10px; background:var(--surface); padding:34px; }
+    .cta h2 { margin:7px 0; font-size:clamp(2rem,4vw,2.8rem); line-height:1.1; letter-spacing:-.05em; }
+    .cta p { max-width:560px; margin:0; color:var(--muted); }
+    .contact-meta { margin-top:17px; color:var(--muted); font-size:.85rem; }
+    .contact-meta a { color:var(--text); text-decoration:underline; text-underline-offset:3px; }
+    .contact-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:30px; align-items:start; }
+    .contact-form { display:grid; gap:13px; }
+    .field { display:grid; gap:5px; }
+    .field label { font-size:.82rem; font-weight:700; }
+    .field input,.field select,.field textarea { width:100%; border:1px solid var(--line); border-radius:6px; background:#10110f; color:var(--text); padding:11px 12px; font:inherit; font-size:.91rem; }
+    .field textarea { min-height:120px; resize:vertical; }
+    .field input::placeholder,.field textarea::placeholder { color:#81877d; }
+    .field input:focus,.field select:focus,.field textarea:focus { outline:2px solid var(--accent); outline-offset:2px; }
+    .form-status { min-height:1.4em; margin:0; color:var(--muted); font-size:.82rem; }
+    .honeypot { position:absolute; left:-10000px; width:1px; height:1px; overflow:hidden; }
+    footer { margin-top:58px; padding:25px 0; border-top:1px solid var(--line); color:var(--muted); font-size:.82rem; }
+    .footerrow { display:flex; align-items:center; justify-content:space-between; gap:18px; }
+    .footlinks { display:flex; gap:17px; flex-wrap:wrap; }
+    @media(max-width:700px) { .nav{flex-wrap:wrap}.menu-toggle{display:inline-flex}.navlinks{display:none;flex-basis:100%;align-items:stretch;flex-direction:column;gap:0;padding:0 0 12px}.navlinks.is-open{display:flex}.navlinks a{padding:10px 2px}.navlinks .navcta{margin-top:5px;padding:10px 14px} }
+    @media(max-width:850px) { .hero{grid-template-columns:1fr;gap:34px;padding-block:68px}.hero-panel{max-width:620px}.projects{grid-template-columns:repeat(2,minmax(0,1fr))}.project:last-child{grid-column:1/-1}.project:last-child .project-art{min-height:170px}.services{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr;gap:24px}.about-logo-frame{width:min(100%,280px);margin-inline:auto}.steps{grid-template-columns:repeat(2,minmax(0,1fr))}.sectionhead{align-items:start;flex-direction:column} }
+    @media(max-width:850px) { .contact-grid{grid-template-columns:1fr} }
+    @media(max-width:560px) { .wrap{width:min(var(--max),calc(100% - 32px))}.nav{min-height:66px;flex-wrap:wrap}.menu-toggle{display:inline-flex}.navlinks{display:none;flex-basis:100%;align-items:stretch;flex-direction:column;gap:0;padding:0 0 12px}.navlinks.is-open{display:flex}.navlinks a{padding:10px 2px}.navlinks .navcta{margin-top:5px;padding:10px 14px}.hero{padding-block:54px 62px}h1{font-size:clamp(2.75rem,13vw,4rem)}.lead{font-size:1rem}.hero-panel{padding:20px}section{padding-block:58px}.projects{grid-template-columns:1fr}.project:last-child{grid-column:auto}.project-art{min-height:190px}.project:last-child .project-art{min-height:190px}.steps{grid-template-columns:1fr}.cta{align-items:flex-start;flex-direction:column;padding:24px}.contact-grid{gap:20px}.footerrow{align-items:flex-start;flex-direction:column} }
+    @media(prefers-reduced-motion:reduce) { html{scroll-behavior:auto} *,*::before,*::after{transition-duration:.01ms !important;animation-duration:.01ms !important;animation-iteration-count:1 !important} }
+  
+    .enquiry-modal[hidden]{display:none!important}.enquiry-modal{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px}.enquiry-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.76);backdrop-filter:blur(5px)}.enquiry-modal__card{position:relative;width:min(100%,480px);padding:36px 28px 28px;border:1px solid #34382f;border-radius:22px;background:#151713;color:#f5f5f0;text-align:center;box-shadow:0 24px 90px rgba(0,0,0,.45)}.enquiry-modal__close{position:absolute;right:14px;top:10px;border:0;background:transparent;color:#c5c9bf;font-size:30px;cursor:pointer}.enquiry-modal__check{display:grid;place-items:center;width:62px;height:62px;margin:0 auto 18px;border-radius:50%;background:#d5f69b;color:#17200c;font-size:34px;font-weight:800}.enquiry-modal__card h2{margin:0 0 12px;font-size:clamp(25px,5vw,34px)}.enquiry-modal__card p{color:#c4c9bd;line-height:1.65;margin:0 0 24px}.contact-form button:disabled{opacity:.7;cursor:wait}
+
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="FlowZenix home"><img class="brand-logo" src="/logo-mark.png" alt="" width="40" height="40"><span>FlowZenix</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+      <nav class="navlinks" id="main-nav" aria-label="Main navigation"><a href="#work">Work</a><a href="#services">Services</a><a href="#about">About</a><a href="#process">Process</a><a class="navcta" href="#contact">Discuss a project <span aria-hidden="true">↗</span></a></nav>
+    </div>
+  </header>
+  <main id="top">
+    <div class="wrap hero">
+      <div>
+        <div class="eyebrow">Websites · Web apps · Automation</div>
+        <h1>Better websites.<br><span>Smarter workflows.</span></h1>
+        <p class="lead">FlowZenix builds responsive business websites, practical web applications, and useful automations that improve your online presence and simplify everyday work.</p>
+        <div class="actions"><a class="btn primary" href="#contact">Discuss Your Project <span aria-hidden="true">↗</span></a><a class="btn" href="#work">Explore My Work <span aria-hidden="true">↓</span></a></div>
+        <p class="hero-note">Independent portfolio · Working demos and concepts</p>
+      </div>
+      <aside class="hero-panel" aria-label="FlowZenix services at a glance">
+        <div class="panel-top"><span class="panel-dot" aria-hidden="true"></span> Practical digital work</div>
+        <h2 class="panel-title">Useful by design.<br>Clear from day one.</h2>
+        <p class="panel-copy">A focused approach for businesses that need a better website, a simpler process, or both.</p>
+        <ul class="panel-list"><li><span class="check" aria-hidden="true">✓</span> Clear scope before development</li><li><span class="check" aria-hidden="true">✓</span> Responsive, accessible interfaces</li><li><span class="check" aria-hidden="true">✓</span> A practical handover at launch</li></ul>
+      </aside>
+    </div>
+    <section id="work"><div class="wrap">
+      <div class="sectionhead"><div><div class="kicker">Selected projects</div><h2 class="sectiontitle">Working demos and concepts.</h2></div><p class="sectiondesc">A selection of focused concepts for hospitality, sales, and everyday workflow needs.</p></div>
+      <div class="projects">
+        <article class="project"><div class="project-art art-cafe"><span class="art-meta">Food &amp; hospitality</span><span class="art-title">A welcoming online home for a café.</span><span class="preview-label">Portfolio concept</span></div><div class="projectbody"><h3>Café Website Concept</h3><p>A café website concept focused on presenting the menu, atmosphere, and visitor information in a clear, welcoming way.</p><div class="projectfoot"><span class="demotag">Website concept</span><a class="textlink" href="https://dummycafepage.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open Cafe Website Concept demo in a new tab">View live demo ↗</a></div></div></article>
+        <article class="project"><div class="project-art art-crm"><span class="art-meta">Sales &amp; productivity</span><span class="art-title">Keep leads and follow-ups organized.</span><span class="preview-label">Portfolio concept</span></div><div class="projectbody"><h3>FlowLead CRM</h3><p>A CRM interface concept centered on organizing prospects, follow-ups, and a simple sales pipeline.</p><div class="projectfoot"><span class="demotag">CRM concept</span><a class="textlink" href="https://flowleadcrm.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open FlowLead CRM demo in a new tab">View live demo ↗</a></div></div></article>
+        <article class="project"><div class="project-art art-flow"><span class="art-meta">Workflow automation</span><span class="art-title">Give repetitive enquiries a clearer path.</span><span class="preview-label">Portfolio concept</span></div><div class="projectbody"><h3>FlowPilot AI</h3><p>An automation interface concept exploring a clearer review path for incoming enquiries.</p><div class="projectfoot"><span class="demotag">Automation concept</span><a class="textlink" href="https://flowpilotaie.netlify.app/" target="_blank" rel="noopener noreferrer" aria-label="Open FlowPilot AI demo in a new tab">View live demo ↗</a></div></div></article>
+      </div>
+    </div></section>
+    <section id="services"><div class="wrap">
+      <div class="sectionhead"><div><div class="kicker">Services</div><h2 class="sectiontitle">The right tool for the job.</h2></div><p class="sectiondesc">Start with a specific business need. Scope, timing, and costs are agreed before development begins.</p></div>
+      <div class="services">
+        <article class="service"><span class="service-num">01</span><h3>Websites and Landing Pages</h3><p>Responsive business, campaign, and portfolio sites that explain what you offer and make the next step clear.</p></article>
+        <article class="service"><span class="service-num">02</span><h3>Business Web Applications</h3><p>Practical tools such as booking flows, dashboards, CRM features, and structured forms, scoped to your workflow.</p></article>
+        <article class="service"><span class="service-num">03</span><h3>AI Automation and Integrations</h3><p>Useful API connections and workflow automation, with AI features where they fit and can be supported reliably.</p></article>
+      </div>
+    </div></section>
+    <section id="about"><div class="wrap about-grid"><div class="about-logo-frame"><img class="about-logo" src="/flowzenix-logo.jpg" alt="FlowZenix logo" width="1254" height="1254" loading="lazy" decoding="async"></div><div class="about-copy"><div class="kicker">About FlowZenix</div><h2>Digital work built around practical business needs.</h2><p>FlowZenix creates business websites, useful web applications, and connected workflows with a focus on clarity and everyday use.</p><p>Each project begins with a clear understanding of the goal. Scope, review points, and handover are agreed before launch.</p></div></div></section>
+    <section id="process"><div class="wrap"><div class="sectionhead"><div><div class="kicker">Process</div><h2 class="sectiontitle">A clear path from brief to launch.</h2></div></div><div class="steps">
+      <article class="step"><div class="stepnum">01 / DISCUSS</div><h3>Understand the need</h3><p>Share your audience, goals, and current challenges.</p></article>
+      <article class="step"><div class="stepnum">02 / AGREE</div><h3>Set the scope</h3><p>Confirm deliverables, timeline, and price before work starts.</p></article>
+      <article class="step"><div class="stepnum">03 / DEVELOP</div><h3>Build and review</h3><p>Develop the agreed solution and review it at clear checkpoints.</p></article>
+      <article class="step"><div class="stepnum">04 / HAND OVER</div><h3>Launch and support</h3><p>Launch after approval and discuss any support you need.</p></article>
+    </div></div></section>
+    <section id="faq"><div class="wrap"><div class="sectionhead"><div><div class="kicker">Questions</div><h2 class="sectiontitle">A few practical details.</h2></div></div><div class="faq">
+      <details><summary>How long does a project take?</summary><p>Timing depends on the scope, content, integrations, and review schedule. A timeline is agreed after we understand the requirements.</p></details>
+      <details><summary>How is pricing decided?</summary><p>Pricing is based on the agreed deliverables and complexity. You receive a defined scope and price before development begins.</p></details>
+      <details><summary>Who pays for the domain and hosting?</summary><p>Domain, hosting, and third-party service costs depend on your chosen setup. Any required recurring costs should be identified before launch.</p></details>
+      <details><summary>Can you provide ongoing support?</summary><p>Support and maintenance can be discussed and scoped based on the website or application after launch.</p></details>
+    </div></div></section>
+    <section id="contact"><div class="wrap"><div class="contact-grid"><div><div class="kicker">Contact</div><h2 class="sectiontitle">Tell me what you need.</h2><p class="sectiondesc">Share a little about the website, application, or workflow you have in mind. We can discuss a practical next step.</p><div class="contact-meta">Email: <a href="mailto:flowzenix.digital9@gmail.com">flowzenix.digital9@gmail.com</a></div><div class="actions" style="margin-top:18px"><a class="btn" href="https://wa.me/919136587600?text=Hi%2C%20I%20visited%20FlowZenix%20and%20would%20like%20to%20discuss%20a%20website%20or%20automation%20project." target="_blank" rel="noopener noreferrer">WhatsApp ↗</a></div></div>
+      <form class="contact-form" id="project-enquiry">
+        <div class="field"><label for="contact-name">Name</label><input id="contact-name" name="name" type="text" autocomplete="name" required></div>
+        <div class="field"><label for="contact-email">Email address</label><input id="contact-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field"><label for="contact-service">Service required</label><select id="contact-service" name="service" required><option value="" selected disabled>Select a service</option><option>Website or landing page</option><option>Business web application</option><option>AI automation or integration</option><option>Not sure yet</option></select></div>
+        <div class="field"><label for="contact-details">Project details</label><textarea id="contact-details" name="message" required placeholder="What would you like to build or improve?"></textarea></div>
+        <button class="btn primary" type="submit">Send project enquiry <span aria-hidden="true">↗</span></button>
+        <p class="form-status" id="form-status" aria-live="polite"></p>
+      </form></div></div></section>
+  </main>
+
+  <div class="enquiry-modal" id="enquiry-modal" hidden role="dialog" aria-modal="true" aria-labelledby="enquiry-modal-title">
+    <div class="enquiry-modal__backdrop" data-close-modal></div>
+    <div class="enquiry-modal__card">
+      <button class="enquiry-modal__close" type="button" aria-label="Close" data-close-modal>×</button>
+      <div class="enquiry-modal__check" aria-hidden="true">✓</div>
+      <h2 id="enquiry-modal-title">Enquiry sent!</h2>
+      <p>Thanks for reaching out to FlowZenix. Your project details have been submitted. We'll get back to you soon.</p>
+      <button class="btn primary" type="button" data-close-modal>Back to website</button>
+    </div>
+  </div>
+  <footer><div class="wrap footerrow"><a class="brand" href="#top"><img class="brand-logo" src="/logo-mark.png" alt="" width="40" height="40"><span>FlowZenix</span></a><div class="footlinks"><a href="#work">Work</a><a href="#services">Services</a><a href="#contact">Contact</a><a href="mailto:flowzenix.digital9@gmail.com">Email</a></div><span>© <span id="year"></span> FlowZenix</span></div></footer>
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const navigation = document.querySelector('#main-nav');
+    menuButton.addEventListener('click', () => {
+      const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!isExpanded));
+      navigation.classList.toggle('is-open', !isExpanded);
+    });
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) {
+        menuButton.setAttribute('aria-expanded', 'false');
+        navigation.classList.remove('is-open');
+      }
+    });
+    const enquiryForm = document.querySelector('#project-enquiry');
+    const enquiryModal = document.querySelector('#enquiry-modal');
+    const enquiryStatus = document.querySelector('#form-status');
+    const enquirySubmit = enquiryForm.querySelector('button[type="submit"]');
+    const originalSubmitText = enquirySubmit.innerHTML;
+    const closeEnquiryModal = () => { enquiryModal.hidden = true; };
+    enquiryModal.querySelectorAll('[data-close-modal]').forEach((el) => el.addEventListener('click', closeEnquiryModal));
+    document.addEventListener('keydown', (event) => { if (event.key === 'Escape') closeEnquiryModal(); });
+
+    enquiryForm.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      if (!enquiryForm.reportValidity()) return;
+      const formData = new FormData(enquiryForm);
+      const payload = new URLSearchParams();
+      payload.set('name', String(formData.get('name') || '').trim());
+      payload.set('email', String(formData.get('email') || '').trim());
+      payload.set('service', String(formData.get('service') || '').trim());
+      payload.set('budget', '');
+      payload.set('message', String(formData.get('message') || '').trim());
+      enquirySubmit.disabled = true;
+      enquirySubmit.textContent = 'Sending…';
+      enquiryStatus.textContent = 'Submitting your enquiry…';
+      try {
+        // Apps Script redirects cross-origin responses, so no-cors prevents a browser CORS block.
+        // The Sheet must be checked during the first live test to verify successful saving.
+        await fetch('https://script.google.com/macros/s/AKfycbyACzTxSOesNr-KPTd9ydhluUK4qgrk4fEshzuKdB8YT67ZlCMYh1Hbn27fAmvORmbY/exec', { method: 'POST', mode: 'no-cors', body: payload });
+        enquiryForm.reset();
+        enquiryStatus.textContent = '';
+        enquiryModal.hidden = false;
+      } catch (error) {
+        enquiryStatus.textContent = 'Could not send the enquiry. Please try again or email flowzenix.digital9@gmail.com.';
+      } finally {
+        enquirySubmit.disabled = false;
+        enquirySubmit.innerHTML = originalSubmitText;
+      }
+    });
+    document.querySelector('#year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
