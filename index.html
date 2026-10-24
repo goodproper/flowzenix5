@@ -237,7 +237,7 @@
       try {
         // Apps Script redirects cross-origin responses, so no-cors prevents a browser CORS block.
         // The Sheet must be checked during the first live test to verify successful saving.
-        await fetch('https://script.google.com/macros/s/AKfycbyACzTxSOesNr-KPTd9ydhluUK4qgrk4fEshzuKdB8YT67ZlCMYh1Hbn27fAmvORmbY/exec', { method: 'POST', mode: 'no-cors', body: payload });
+        await fetch('https://script.google.com/macros/s/AKfycbxFe6fAGoKBh3_dO3ygBtSxGsbky92S8otJwk2ryt4I2JySLET16yKR9dzsDsAkxCZN/exec', { method: 'POST', mode: 'no-cors', body: payload });
         enquiryForm.reset();
         enquiryStatus.textContent = '';
         enquiryModal.hidden = false;
